@@ -5,6 +5,8 @@ $(document).ready(() => {
 
         const query = `https://api.github.com/users/${$("#username").val()}/repos`;
         $.getJSON(query, (data) => {
+            $("#table-body").empty()
+
             for(index in data){
                 const row = $("<tr></tr>");
                 ["name", "description", "stargazers_count", "watchers_count"].forEach(p => {
