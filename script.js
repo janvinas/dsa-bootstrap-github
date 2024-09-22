@@ -9,7 +9,7 @@ $(document).ready(() => {
 
             for(index in data){
                 const row = $("<tr></tr>");
-                ["name", "description", "stargazers_count", "watchers_count"].forEach(p => {
+                ["name", "description", "stargazers_count", "forks_count"].forEach(p => {
                     const col = document.createElement("td");
                     col.textContent = data[index][p]
                     col.style.cursor = "pointer"
